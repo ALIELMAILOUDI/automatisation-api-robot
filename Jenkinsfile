@@ -53,12 +53,12 @@ pipeline {
             echo 'Publication des résultats de test Robot Framework...'
             // Appel de la fonction du plugin Robot Framework avec les paramètres corrigés
             robot(
-                outputPath: 'Resultats',        // Dossier où se trouvent les résultats
-                reportFileName: 'report.html',  // Nom du fichier de rapport (Paramètre corrigé)
-                logFileName: 'log.html',        // Nom du fichier de log (Paramètre corrigé)
-                disableArchiveOutput: true,     // Permet de ne pas archiver tous les fichiers de sortie
-                passThreshold: 100.0            // Le plugin déterminera si le build est un succès ou un échec
+                outputPath: 'Resultats',
+                reportFileName: 'report.html',
+                logFileName: 'log.html',
+                disableArchiveOutput: true,
+                passThreshold: 100.0
             )
         }
     }
-}```
+}
