@@ -51,16 +51,14 @@ pipeline {
         // que les tests aient réussi ou échoué.
         always {
             echo 'Publication des résultats de test Robot Framework...'
-            // Appel de la fonction du plugin Robot Framework
+            // Appel de la fonction du plugin Robot Framework avec les paramètres corrigés
             robot(
-                outputPath: 'Resultats',    // Dossier où se trouvent les résultats
-                reportHtml: 'report.html',  // Nom du fichier de rapport
-                logHtml: 'log.html',        // Nom du fichier de log
-                // Permet de ne pas archiver tous les fichiers de sortie, économise de l_espace
-                disableArchiveOutput: true,
-                // Le plugin déterminera si le build est un succès ou un échec
-                passThreshold: 100.0
+                outputPath: 'Resultats',        // Dossier où se trouvent les résultats
+                reportFileName: 'report.html',  // Nom du fichier de rapport (Paramètre corrigé)
+                logFileName: 'log.html',        // Nom du fichier de log (Paramètre corrigé)
+                disableArchiveOutput: true,     // Permet de ne pas archiver tous les fichiers de sortie
+                passThreshold: 100.0            // Le plugin déterminera si le build est un succès ou un échec
             )
         }
     }
-}
+}```
