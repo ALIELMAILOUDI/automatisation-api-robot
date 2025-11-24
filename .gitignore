@@ -1,0 +1,13 @@
+# Environnement virtuel Python
+venv/
+
+# Dossier des résultats de tests
+Resultats/
+
+# Fichiers cache de Python
+__pycache__/
+*.pyc
+
+# Fichiers des IDEs (optionnel, mais bonne pratique)
+.idea/
+.vscode/
