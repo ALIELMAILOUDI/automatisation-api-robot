@@ -78,3 +78,9 @@ Ce projet inclut un `Jenkinsfile` qui définit un pipeline d'intégration contin
 2.  **Installation des dépendances** : Création d'un environnement virtuel propre et installation des paquets depuis `requirements.txt`.
 3.  **Exécution des Tests API** : Lancement de la suite de tests Robot Framework.
 4.  **Publication des Résultats** : Utilisation du plugin Robot Framework pour afficher les rapports et les tendances des résultats directement dans l'interface de Jenkins.
+
+## 📊 Aperçu des Résultats
+Voici une capture d'écran montrant le succès de l'exécution de la suite de tests, publiée par le pipeline Jenkins.
+
+
+<img width="1856" height="1050" alt="Pasted image" src="https://github.com/user-attachments/assets/d2ecd5b6-9b38-471f-adda-586ee17730f8" />
