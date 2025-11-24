@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.3 on linux)" generated="2025-11-24T09:04:45.344187" rpa="false" schemaversion="5">
+<suite id="s1" name="Api Suite" source="/home/ali/automatisation-api-robot/Tests/api_suite.robot">
+<kw name="Créer une session pour l'API" owner="mots_cles_api" type="SETUP">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-11-24T09:04:45.512365" level="INFO">Creating Session using : alias=api_session, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api_session</arg>
+<arg>${URL_DE_BASE}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-11-24T09:04:45.511933" elapsed="0.000910"/>
+</kw>
+<status status="PASS" start="2025-11-24T09:04:45.510767" elapsed="0.002216"/>
+</kw>
+<test id="s1-t1" name="Vérifier la récupération de la liste des articles" line="7">
+<kw name="Récupérer la liste des articles" owner="mots_cles_api">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-11-24T09:04:46.275154" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts 
+ path_url=/posts 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-11-24T09:04:46.275425" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 24 Nov 2025 08:04:48 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'Cache-Control': 'max-age=43200', 'Content-Encoding': 'gzip', 'etag': 'W/"6b80-Ybsq/K6GwwqrYkAsFxqDXGC7DoM"', 'expires': '-1', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=HchedSVrKxJW53rl0zD%2FG%2FPxRTGH8%2FaYMWJTln1vpRc%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1762196109"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=HchedSVrKxJW53rl0zD%2FG%2FPxRTGH8%2FaYMWJTln1vpRc%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1762196109"', 'Server': 'cloudflare', 'vary': 'Origin, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '999', 'x-ratelimit-reset': '1762196124', 'Age': '25801', 'cf-cache-status': 'HIT', 'CF-RAY': '9a3765ca7bed70ed-MRS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+  },
+  {
+    "userId": 1,
+    "id": 3,
+    "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+  },
+  {
+    "userId": 1,
+    "id": 4,
+    "title": "eum et est occaecati",
+    "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+  },
+  {
+    "userId": 1,
+    "id": 5,
+    "title": "nesciunt quas odio",
+    "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+  },
+  {
+    "userId": 1,
+    "id": 6,
+    "title": "dolorem eum magni eos aperiam quia",
+    "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+  },
+  {
+    "userId": 1,
+    "id": 7,
+    "title": "magnam facilis autem",
+    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+  },
+  {
+    "userId": 1,
+    "id": 8,
+    "title": "dolorem dolore est ipsam",
+    "body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+  },
+  {
+    "userId": 1,
+    "id": 9,
+    "title": "nesciunt iure omnis dolorem tempora et accusantium",
+    "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+  },
+  {
+    "userId": 1,
+    "id": 10,
+    "title": "optio molestias id quia eum",
+    "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+  },
+  {
+    "userId": 2,
+    "id": 11,
+    "title": "et ea vero quia laudantium autem",
+    "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+  },
+  {
+    "userId": 2,
+    "id": 12,
+    "title": "in quibusdam tempore odit est dolorem",
+    "body": "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
+  },
+  {
+    "userId": 2,
+    "id": 13,
+    "title": "dolorum ut in voluptas mollitia et saepe quo animi",
+    "body": "aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam"
+  },
+  {
+    "userId": 2,
+    "id": 14,
+    "title": "voluptatem eligendi optio",
+    "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
+  },
+  {
+    "userId": 2,
+    "id": 15,
+    "title": "eveniet quod temporibus",
+    "body": "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae"
+  },
+  {
+    "userId": 2,
+    "id": 16,
+    "title": "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
+    "body": "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta"
+  },
+  {
+    "userId": 2,
+    "id": 17,
+    "title": "fugit voluptas sed molestias voluptatem provident",
+    "body": "eos voluptas et aut odit natus earum\naspernatur fuga molestiae ullam\ndeserunt ratione qui eos\nqui nihil ratione nemo velit ut aut id quo"
+  },
+  {
+    "userId": 2,
+    "id": 18,
+    "title": "voluptate et itaque vero tempora molestiae",
+    "body": "eveniet quo quis\nlaborum totam consequatur non dolor\nut et est repudiandae\nest voluptatem vel debitis et magnam"
+  },
+  {
+    "userId": 2,
+    "id": 19,
+    "title": "adipisci placeat illum aut reiciendis qui",
+    "body": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas"
+  },
+  {
+    "userId": 2,
+    "id": 20,
+    "title": "doloribus ad provident suscipit at",
+    "body": "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo"
+  },
+  {
+    "userId": 3,
+    "id": 21,
+    "title": "asperiores ea ipsam voluptatibus modi minima quia sint",
+    "body": "repellat aliquid praesentium dolorem quo\nsed totam minus non itaque\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\ntempora et tenetur expedita sunt"
+  },
+  {
+    "userId": 3,
+    "id": 22,
+    "title": "dolor sint quo a velit explicabo quia nam",
+    "body": "eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita earum mollitia molestiae aut atque rem suscipit\nnam impedit esse"
+  },
+  {
+    "userId": 3,
+    "id": 23,
+    "title": "maxime id vitae nihil numquam",
+    "body": "veritatis unde neque eligendi\nquae quod architecto quo neque vitae\nest illo sit tempora doloremque fugit quod\net et vel beatae sequi ullam sed tenetur perspiciatis"
+  },
+  {
+    "userId": 3,
+    "id": 24,
+    "title": "autem hic labore sunt dolores incidunt",
+    "body": "enim et ex nulla\nomnis voluptas quia qui\nvoluptatem consequatur numquam aliquam sunt\ntotam recusandae id dignissimos aut sed asperiores deserunt"
+  },
+  {
+    "userId": 3,
+    "id": 25,
+    "title": "rem alias distinctio quo quis",
+    "body": "ullam consequatur ut\nomnis quis sit vel consequuntur\nipsa eligendi ipsum molestiae et omnis error nostrum\nmolestiae illo tempore quia et distinctio"
+  },
+  {
+    "userId": 3,
+    "id": 26,
+    "title": "est et quae odit qui non",
+    "body": "similique esse doloribus nihil accusamus\nomnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus\nperspiciatis cum ut laudantium\nomnis aut molestiae vel vero"
+  },
+  {
+    "userId": 3,
+    "id": 27,
+    "title": "quasi id et eos tenetur aut quo autem",
+    "body": "eum sed dolores ipsam sint possimus debitis occaecati\ndebitis qui qui et\nut placeat enim earum aut odit facilis\nconsequatur suscipit necessitatibus rerum sed inventore temporibus consequatur"
+  },
+  {
+    "userId": 3,
+    "id": 28,
+    "title": "delectus ullam et corporis nulla voluptas sequi",
+    "body": "non et quaerat ex quae ad maiores\nmaiores recusandae totam aut blanditiis mollitia quas illo\nut voluptatibus voluptatem\nsimilique nostrum eum"
+  },
+  {
+    "userId": 3,
+    "id": 29,
+    "title": "iusto eius quod necessitatibus culpa ea",
+    "body": "odit magnam ut saepe sed non qui\ntempora atque nihil\naccusamus illum doloribus illo dolor\neligendi repudiandae odit magni similique sed cum maiores"
+  },
+  {
+    "userId": 3,
+    "id": 30,
+    "title": "a quo magni similique perferendis",
+    "body": "alias dolor cumque\nimpedit blanditiis non eveniet odio maxime\nblanditiis amet eius quis tempora quia autem rem\na provident perspiciatis quia"
+  },
+  {
+    "userId": 4,
+    "id": 31,
+    "title": "ullam ut quidem id aut vel consequuntur",
+    "body": "debitis eius sed quibusdam non quis consectetur vitae\nimpedit ut qui consequatur sed aut in\nquidem sit nostrum et maiores adipisci atque\nquaerat voluptatem adipisci repudiandae"
+  },
+  {
+    "userId": 4,
+    "id": 32,
+    "title": "doloremque illum aliquid sunt",
+    "body": "deserunt eos nobis asperiores et hic\nest debitis repellat molestiae optio\nnihil ratione ut eos beatae quibusdam distinctio maiores\nearum voluptates et aut adipisci ea maiores voluptas maxime"
+  },
+  {
+    "userId": 4,
+    "id": 33,
+    "title": "qui explicabo molestiae dolorem",
+    "body": "rerum ut et numquam laborum odit est sit\nid qui sint in\nquasi tenetur tempore aperiam et quaerat qui in\nrerum officiis sequi cumque quod"
+  },
+  {
+    "userId": 4,
+    "id": 34,
+    "title": "magnam ut rerum iure",
+    "body": "ea velit perferendis earum ut voluptatem voluptate itaque iusto\ntotam pariatur in\nnemo voluptatem voluptatem autem magni tempora minima in\nest distinctio qui assumenda accusamus dignissimos officia nesciunt nobis"
+  },
+  {
+    "userId": 4,
+    "id": 35,
+    "title": "id nihil consequatur molestias animi provident",
+    "body": "nisi error delectus possimus ut eligendi vitae\nplaceat eos harum cupiditate facilis reprehenderit voluptatem beatae\nmodi ducimus quo illum voluptas eligendi\net nobis quia fugit"
+  },
+  {
+    "userId": 4,
+    "id": 36,
+    "title": "fuga nam accusamus voluptas reiciendis itaque",
+    "body": "ad mollitia et omnis minus architecto odit\nvoluptas doloremque maxime aut non ipsa qui alias veniam\nblanditiis culpa aut quia nihil cumque facere et occaecati\nqui aspernatur quia eaque ut aperiam inventore"
+  },
+  {
+    "userId": 4,
+    "id": 37,
+    "title": "provident vel ut sit ratione est... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2025-11-24T09:04:46.275760" level="INFO">/home/ali/automatisation-api-robot/venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-11-24T09:04:46.276043" level="INFO">${reponse} = &lt;Response [200]&gt;</msg>
+<var>${reponse}</var>
+<arg>api_session</arg>
+<arg>/posts</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-11-24T09:04:45.514333" elapsed="0.761755"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.277162" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${reponse.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.276360" elapsed="0.000889"/>
+</kw>
+<return>
+<value>${reponse.json()}</value>
+<status status="PASS" start="2025-11-24T09:04:46.277339" elapsed="0.000078"/>
+</return>
+<msg time="2025-11-24T09:04:46.278878" level="INFO">${articles} = [{'userId': 1, 'id': 1, 'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit', 'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderi...</msg>
+<var>${articles}</var>
+<doc>Récupère tous les articles et vérifie que la réponse est correcte.</doc>
+<status status="PASS" start="2025-11-24T09:04:45.513879" elapsed="0.765048"/>
+</kw>
+<kw name="Length Should Be" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.279678" level="INFO">Length is 100.</msg>
+<arg>${articles}</arg>
+<arg>100</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.279290" elapsed="0.000462"/>
+</kw>
+<tag>GET</tag>
+<status status="PASS" start="2025-11-24T09:04:45.513105" elapsed="0.766879"/>
+</test>
+<test id="s1-t2" name="Vérifier la création d'un nouvel article" line="12">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.280935" level="INFO">${titre_article} = Titre de test Robot Framework</msg>
+<var>${titre_article}</var>
+<arg>Titre de test Robot Framework</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.280738" elapsed="0.000228"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.281305" level="INFO">${corps_article} = Contenu de l'article de test.</msg>
+<var>${corps_article}</var>
+<arg>Contenu de l'article de test.</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.281136" elapsed="0.000197"/>
+</kw>
+<kw name="Créer un nouvel article" owner="mots_cles_api">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.282520" level="INFO">${id_utilisateur_num} = 1</msg>
+<var>${id_utilisateur_num}</var>
+<arg>${id_utilisateur}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.282292" elapsed="0.000259"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.283257" level="INFO">&amp;{corps_requete} = { title=Titre de test Robot Framework | body=Contenu de l'article de test. | userId=1 }</msg>
+<var>&amp;{corps_requete}</var>
+<arg>title=${titre}</arg>
+<arg>body=${corps}</arg>
+<arg>userId=${id_utilisateur_num}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.282683" elapsed="0.000609"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-11-24T09:04:46.472922" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
+ path_url=/posts 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '96', 'Content-Type': 'application/json'} 
+ body=b'{"title": "Titre de test Robot Framework", "body": "Contenu de l\'article de test.", "userId": 1}' 
+ </msg>
+<msg time="2025-11-24T09:04:46.473129" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
+ status=201, reason=Created 
+ headers={'Date': 'Mon, 24 Nov 2025 08:04:48 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '117', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-expose-headers': 'Location', 'Cache-Control': 'no-cache', 'etag': 'W/"75-VDoKF1OXXFq0NIeiN1PvkAPJtRc"', 'expires': '-1', 'location': 'https://jsonplaceholder.typicode.com/posts/101', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Lv2jBq2oXEZGK3OVsyCKxEjSqQq7Sk%2B%2FVAtRVDhq2Jg%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1763971488"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=Lv2jBq2oXEZGK3OVsyCKxEjSqQq7Sk%2B%2FVAtRVDhq2Jg%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1763971488"', 'Server': 'cloudflare', 'vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '999', 'x-ratelimit-reset': '1763971528', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9a3765cb8c8870ed-MRS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={
+  "title": "Titre de test Robot Framework",
+  "body": "Contenu de l'article de test.",
+  "userId": 1,
+  "id": 101
+} 
+ </msg>
+<msg time="2025-11-24T09:04:46.473305" level="INFO">/home/ali/automatisation-api-robot/venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-11-24T09:04:46.473563" level="INFO">${reponse} = &lt;Response [201]&gt;</msg>
+<var>${reponse}</var>
+<arg>api_session</arg>
+<arg>/posts</arg>
+<arg>json=${corps_requete}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.283418" elapsed="0.190194"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.474845" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${reponse.status_code}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.473913" elapsed="0.001033"/>
+</kw>
+<return>
+<value>${reponse.json()}</value>
+<status status="PASS" start="2025-11-24T09:04:46.475048" elapsed="0.000084"/>
+</return>
+<msg time="2025-11-24T09:04:46.475980" level="INFO">${nouvel_article} = {'title': 'Titre de test Robot Framework', 'body': "Contenu de l'article de test.", 'userId': 1, 'id': 101}</msg>
+<var>${nouvel_article}</var>
+<arg>${titre_article}</arg>
+<arg>${corps_article}</arg>
+<arg>1</arg>
+<doc>Crée un nouvel article et vérifie la création.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.281683" elapsed="0.194333"/>
+</kw>
+<kw name="L'article devrait contenir les bonnes données" owner="mots_cles_api">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${article["title"]}</arg>
+<arg>${titre_attendu}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.476827" elapsed="0.000775"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${article["body"]}</arg>
+<arg>${corps_attendu}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.477775" elapsed="0.000583"/>
+</kw>
+<arg>${nouvel_article}</arg>
+<arg>${titre_article}</arg>
+<arg>${corps_article}</arg>
+<doc>Valide que les champs d'un article sont corrects.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.476334" elapsed="0.002104"/>
+</kw>
+<tag>POST</tag>
+<status status="PASS" start="2025-11-24T09:04:46.280290" elapsed="0.198450"/>
+</test>
+<test id="s1-t3" name="Vérifier la création et le schéma d'un nouvel article" line="19">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.479761" level="INFO">${titre_article} = Titre de test</msg>
+<var>${titre_article}</var>
+<arg>Titre de test</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.479566" elapsed="0.000240"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.480103" level="INFO">${corps_article} = Contenu de l'article.</msg>
+<var>${corps_article}</var>
+<arg>Contenu de l'article.</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.479965" elapsed="0.000165"/>
+</kw>
+<kw name="Créer un nouvel article" owner="mots_cles_api">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.481039" level="INFO">${id_utilisateur_num} = 5</msg>
+<var>${id_utilisateur_num}</var>
+<arg>${id_utilisateur}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.480784" elapsed="0.000284"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.481618" level="INFO">&amp;{corps_requete} = { title=Titre de test | body=Contenu de l'article. | userId=5 }</msg>
+<var>&amp;{corps_requete}</var>
+<arg>title=${titre}</arg>
+<arg>body=${corps}</arg>
+<arg>userId=${id_utilisateur_num}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.481226" elapsed="0.000423"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-11-24T09:04:46.676092" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
+ path_url=/posts 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '72', 'Content-Type': 'application/json'} 
+ body=b'{"title": "Titre de test", "body": "Contenu de l\'article.", "userId": 5}' 
+ </msg>
+<msg time="2025-11-24T09:04:46.676220" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
+ status=201, reason=Created 
+ headers={'Date': 'Mon, 24 Nov 2025 08:04:48 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '93', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-expose-headers': 'Location', 'Cache-Control': 'no-cache', 'etag': 'W/"5d-579oGae6WLViSrsQBAHqOeY70qs"', 'expires': '-1', 'location': 'https://jsonplaceholder.typicode.com/posts/101', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Lv2jBq2oXEZGK3OVsyCKxEjSqQq7Sk%2B%2FVAtRVDhq2Jg%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1763971488"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=Lv2jBq2oXEZGK3OVsyCKxEjSqQq7Sk%2B%2FVAtRVDhq2Jg%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1763971488"', 'Server': 'cloudflare', 'vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '998', 'x-ratelimit-reset': '1763971528', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9a3765ccbd4670ed-MRS', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={
+  "title": "Titre de test",
+  "body": "Contenu de l'article.",
+  "userId": 5,
+  "id": 101
+} 
+ </msg>
+<msg time="2025-11-24T09:04:46.676298" level="INFO">/home/ali/automatisation-api-robot/venv/lib/python3.12/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-11-24T09:04:46.676468" level="INFO">${reponse} = &lt;Response [201]&gt;</msg>
+<var>${reponse}</var>
+<arg>api_session</arg>
+<arg>/posts</arg>
+<arg>json=${corps_requete}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.481784" elapsed="0.194716"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-11-24T09:04:46.677288" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${reponse.status_code}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.676688" elapsed="0.000676"/>
+</kw>
+<return>
+<value>${reponse.json()}</value>
+<status status="PASS" start="2025-11-24T09:04:46.677433" elapsed="0.000050"/>
+</return>
+<msg time="2025-11-24T09:04:46.678044" level="INFO">${nouvel_article} = {'title': 'Titre de test', 'body': "Contenu de l'article.", 'userId': 5, 'id': 101}</msg>
+<var>${nouvel_article}</var>
+<arg>${titre_article}</arg>
+<arg>${corps_article}</arg>
+<arg>5</arg>
+<doc>Crée un nouvel article et vérifie la création.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.480376" elapsed="0.197701"/>
+</kw>
+<kw name="Valider Le Schema De L Article" owner="MaBibliothequePerso">
+<msg time="2025-11-24T09:04:46.681521" level="INFO">La validation du schéma a réussi.</msg>
+<arg>${nouvel_article}</arg>
+<doc>Valide que la réponse de l'API pour un article correspond au schéma attendu.</doc>
+<status status="PASS" start="2025-11-24T09:04:46.678271" elapsed="0.003322"/>
+</kw>
+<tag>POST</tag>
+<tag>SCHEMA</tag>
+<status status="PASS" start="2025-11-24T09:04:46.479033" elapsed="0.202787"/>
+</test>
+<status status="PASS" start="2025-11-24T09:04:45.345592" elapsed="1.336843"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">GET</stat>
+<stat pass="2" fail="0" skip="0">POST</stat>
+<stat pass="1" fail="0" skip="0">SCHEMA</stat>
+</tag>
+<suite>
+<stat name="Api Suite" id="s1" pass="3" fail="0" skip="0">Api Suite</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-24T09:04:45.379174" level="WARN">Error in file '/home/ali/automatisation-api-robot/Ressources/mots_cles_api.resource' on line 13: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-11-24T09:04:45.379501" level="WARN">Error in file '/home/ali/automatisation-api-robot/Ressources/mots_cles_api.resource' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
